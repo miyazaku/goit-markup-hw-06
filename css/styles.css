@@ -106,7 +106,7 @@ button {
 @media (min-width: 768px) {
     @media screen and (max-width: 1157px) {
         .menu-addres-item:not(:last-child) {
-            margin-bottom: 12px;
+            margin-right: 12px;
         }
     }
 .page-logo {
@@ -156,6 +156,16 @@ button {
 .page-address {
     display: block;
     font-style: normal;
+    font-weight: 400;
+        font-size: 16px;
+    
+        /* line-height: 24px; */
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--slate);
+}
+.menu-address-item{
+    margin: 16px 12px;
 }
 
 .menu-address-link {
@@ -178,13 +188,14 @@ button {
     }
          .menu-address {
              display: flex;
-             gap: 40px;
+             gap: 12px; 
          }
 .menu-address-link {
      padding: 24px 0;
-     }font-size: 16px;
-     line-height: 1.5;
-     letter-spacing: 0.02em;
+     }
+     .font-size: 16px;
+     .line-height: 1.5;
+     .letter-spacing: 0.02em;
 }
                 
  /*====MOBILE MENU====*/
@@ -317,7 +328,7 @@ button {
     padding: 72px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-        url(../images/hero-img-phone-1x.png);
+        url(../images/img-phone-1x.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -327,7 +338,8 @@ button {
     .page-hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/hero-img-phone-2x.png);
+            url(../images/img-phone-2x.jpg);
+            max-width: 320px;
     }
 }
 .page-title {
@@ -368,14 +380,15 @@ button {
         padding: 112px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/hero-image-tablet-1x.png);
+            url(../images/img-tablet-1x.jpg);
+            max-width: 768px;
     }
 
     @media (min-resolution: 192dpi) {
         .page-hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
-                url(../images/hero-img-tablet-2x.png);
+                url(../images/img-tablet-2x.jpg);
         }
     }
 .page-title {
@@ -391,7 +404,7 @@ button {
         padding: 188px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/hero-img-deskstop-1x.png);
+            url(../images/img-desktop-1x.jpg);
 
         max-width: 1440px;
     }
@@ -400,7 +413,7 @@ button {
         .page-hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
-                url(../images/hero-img-desktop-2x.png);
+                url(../images/img-desktop-2x.jpg);
         }
     }
 .page-title {
@@ -408,11 +421,8 @@ button {
 }
 }
 /*====DESCRIPTION SECTION====*/
-.character-img {
-    display: none;
-}
 
-.page-descriptio {
+.page-description {
     padding: 96px 0;
 }
 .menu-description {
@@ -439,12 +449,15 @@ button {
 @media screen and (min-width: 768px) {
     .menu-description {
         flex-direction: row;
+        gap: 72px 24px;
         flex-wrap: wrap;
-        gap: 24px;
+
     }
 
     .menu-description-item {
         flex-basis: calc((100% - 24px) / 2);
+       
+        
     }
 
     .menu-descr {
@@ -456,7 +469,7 @@ button {
         padding: 120px 0;
     }
 
-    .character-wrapper {
+    .character-img {
         display: flex;
         background-color: #f4f4fd;
         border: 1px solid #8e8f99;
@@ -503,6 +516,7 @@ button {
     align-items: center;
     justify-content: center;
 }
+
 
 .menu-team-item {
     max-width: 264px;
@@ -561,16 +575,19 @@ button {
     fill: #f4f4fd;
 }
 @media screen and (min-width: 768px) {
-    .menu-team {
+
+
+.menu-team {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 64px;
     }
 
-    .menu-team-item {
+.menu-team-item {
         flex-basis: calc((100% - 24px) / 2);
-    }
 }
+}
+
 @media screen and (min-width: 1158px) {
     .page-team {
         padding: 120px 0;
@@ -619,9 +636,9 @@ button {
     padding: 40px 32px;
     background-color: #4d5ae5;
 }
-.portfolio-overlay:hover .portfolio-overlay-text {
-    transform: translateY(0);
-}
+
+
+    
 .container-card-portfolio {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
@@ -649,6 +666,7 @@ button {
     }
  .menu-portfolio-item {
      flex-basis: calc((100% - 24px) / 2);
+    
  }
  }
  @media screen and (min-width: 1158px) {
@@ -663,6 +681,12 @@ button {
      .menu-portfolio-item {
          flex-basis: calc((100% - 2 * 24px) / 3);
      }
+         .menu-portfolio-item:hover {
+             box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+         }
+                 .menu-portfolio-item:hover .portfolio-overlay-text {
+                     transform: translateY(0);
+                 }
  }
  .page-footer {
      padding: 92px 0;
@@ -675,15 +699,15 @@ button {
      justify-content: center;
  }
  .page-logo-footer {
-     font-family: 'Raleway', sans-serif;
-     font-weight: 700;
-     font-size: 18px;
-     line-height: 1.17;
-     letter-spacing: 0.03em;
-     color: #4d5ae5;
-     text-transform: uppercase;
-     display: block;
-     margin-bottom: 16px;
+    font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        color: #4d5ae5;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 16px;
  }
  .logo-footer-color {
      color: #f4f4fd;
@@ -692,6 +716,7 @@ button {
     color: #f4f4fd;
     letter-spacing: 0.02em;
     max-width: 264px;
+    
 }
 .footer-social-text {
     font-weight: 500;
@@ -700,6 +725,7 @@ button {
     letter-spacing: 0.02em;
     color: #fff;
     margin-bottom: 16px;
+    
 }
 .footer-social-list {
     display: flex;
@@ -779,6 +805,11 @@ button {
     fill: #fff;
 }
 @media screen and (max-width: 767px) {
+    .page-logo-footer{
+        margin: 96px auto 16px auto;
+        text-align: center;
+        width: max-content;
+    }
 
     .footer-logo-link,
     .footer-social-text {
@@ -787,7 +818,6 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-    @media screen and (max-width: 1157px) {
         .footer-wrapper {
             padding-left: 108px;
             justify-content: flex-start;
@@ -796,6 +826,7 @@ button {
 
     .footer-form {
         flex-direction: row;
+        gap: 24px;
     }
 
     .footer-email {
@@ -818,6 +849,7 @@ button {
     .footer-social {
         margin: 0 80px 0 0;
     }
+   
 
     .footer-form {
         gap: 24px;
@@ -883,7 +915,7 @@ button {
     fill: #ffffff;
 }
 
-.modal-switcher-pic {
+.modal-switcher-icon {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -928,7 +960,7 @@ button {
     border-color: #4d5ae5;
 }
 
-.modal-input-pic {
+.modal-input-icon {
     position: absolute;
     top: 50%;
     left: 16px;
@@ -944,34 +976,6 @@ button {
     opacity: 0;
 }
 
-.modal-input:not(:placeholder-shown):invalid~.modal-input-valid {
-    opacity: 1;
-    fill: red;
-}
-
-.modal-input:focus+.modal-input-pic {
-    fill: #4d5ae5;
-}
-
-.modal-input:not(:placeholder-shown):invalid {
-    border-color: red;
-}
-
-.modal-input:not(:placeholder-shown):invalid+.modal-input-pic {
-    fill: red;
-}
-
-.modal-input:not(:placeholder-shown):valid~.modal-input-valid {
-    opacity: 1;
-    fill: green;
-}
-.modal-input:not(:placeholder-shown):valid {
-    border-color: green;
-}
-
-.modal-input:not(:placeholder-shown):valid+.modal-input-pic {
-    fill: green;
-}
 
 .modal-container-comment {
     margin-bottom: 16px;
