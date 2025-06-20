@@ -105,10 +105,12 @@ button {
 }
 @media (min-width: 768px) {
     @media screen and (max-width: 1157px) {
-        .menu-addres-item:not(:last-child) {
-            margin-right: 12px;
+        
+        }.menu-addres-item{
+            gap: 12px;
         }
     }
+
 .page-logo {
     margin-right: 120px;
     padding: 24px 0;
@@ -120,6 +122,12 @@ button {
 .menu {
     display: flex;
     gap: 40px;
+}
+
+.menu-address{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 .menu-link {
     display: block;
@@ -164,23 +172,24 @@ button {
         letter-spacing: 0.02em;
         color: var(--slate);
 }
-.menu-address li {
-    margin-right: 40px;
-}
 
-.menu-address li:last-child {
-    margin-right: 0;
-}
 
 .menu-address-link {
-   font-style: normal;
+    font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.32px;
-    color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+        font-size: 12px;
+    
+        /* line-height: 14px; */
+        line-height: 1.16667;
+        letter-spacing: 0.04em;
+        color: var(--slate);
+    }
+     
+    .menu-address{
+        
+        gap: 12px;
+    }
+   
 .menu-address-link:hover,
 .menu-address-link:focus {
     color: #404bbf;
@@ -192,7 +201,7 @@ button {
     }
          .menu-address {
              display: flex;
-             gap: 12px; 
+             gap: 40px; 
          }
 .menu-address-link {
      padding: 24px 0;
@@ -828,8 +837,12 @@ button {
     fill: #fff;
 }
 @media screen and (max-width: 767px) {
+    .page-footer {
+        padding-top: 91px;
+        padding-bottom: 72px;
+    }
     .page-logo-footer{
-        margin: 91px auto 16px auto;
+        margin: 0 auto 16px auto;
         text-align: center;
         width: max-content;
     }
@@ -844,18 +857,23 @@ button {
     .footer-form{
         margin-left: 16px;
         margin-right:16px;
-        margin-bottom: 96px;
+        
     }
 }
 
 @media screen and (min-width: 768px) {
+    .page-footer{
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
         .footer-wrapper {
-            padding-top: 96px;
-            padding-left: 108px;
-            padding-bottom: 72px;
+            width: 584px;
             justify-content: flex-start;
         }
     
+        .page-logo-footer{
+            padding-bottom: 16px;
+        }
 
     .footer-form {
         flex-direction: row;
