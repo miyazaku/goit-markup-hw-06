@@ -67,6 +67,7 @@ button {
     .container {
         width: 768px;
     }
+    }
 }
 
 @media (min-width: 1158px) {
@@ -100,7 +101,8 @@ button {
     color: #2e2f42;
 }
 .menu,
-.page-address {
+.page-address,
+.menu-address {
     display: none;
 }
 @media (min-width: 768px) {
@@ -110,6 +112,22 @@ button {
             gap: 12px;
         }
     }
+    @media (min-width: 768px){
+        .menu {
+                display: flex;
+                gap: 40px;
+            }
+        
+        
+            .menu-address {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+                        .burger-btn {
+                            display: none;
+                        }
+    }
 
 .page-logo {
     margin-right: 120px;
@@ -118,16 +136,6 @@ button {
 .page-nav{
     display: flex;
         align-items: center;
-}
-.menu {
-    display: flex;
-    gap: 40px;
-}
-
-.menu-address{
-    display: flex;
-    flex-direction: column;
-    gap: 0;
 }
 .menu-link {
     display: block;
@@ -158,9 +166,7 @@ button {
 .menu-link:focus {
     color: #404bbf;
 }
-.burger-btn {
-    display: none;
-}
+
 .page-address {
     display: block;
         font-style: normal;
@@ -186,7 +192,6 @@ button {
     }
      
     .menu-address{
-        
         gap: 12px;
     }
    
@@ -194,23 +199,28 @@ button {
 .menu-address-link:focus {
     color: #404bbf;
 }
-}
+
 @media screen and (min-width: 1158px) {
+    .container-header{
+        width: 1158px;
+    }
+
     .page-logo {
         margin-right: 76px;
+
     }
-         .menu-address {
-             display: flex;
-             gap: 40px; 
-         }
-.menu-address-link {
-     padding: 24px 0;
-     }
-     .font-size: 16px;
-     .line-height: 1.5;
-     .letter-spacing: 0.02em;
-}
-                
+                 .menu-address {
+                    flex-direction: row;
+                     gap: 40px;
+                 }
+        
+                 .menu-address-link {
+                     padding: 24px 0;
+                 .font-size: 16px;
+                 .line-height: 1.5;
+                 .letter-spacing: 0.02em;
+                 }
+                }
  /*====MOBILE MENU====*/
 
 .mobile-menu {
@@ -872,7 +882,7 @@ button {
         }
     
         .page-logo-footer{
-            padding-bottom: 16px;
+            margin-bottom: 16px;
         }
 
     .footer-form {
@@ -888,9 +898,10 @@ button {
     
 
     .footer-wrapper {
+        width: 1158px;
         gap: 0;
         display: flex;
-        padding: 98px 0 102px 0;
+        padding: 0 15px;
         align-items: flex-start;
     }
 
